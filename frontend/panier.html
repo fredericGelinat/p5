@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--description site SEO-->
+    <meta name="description" content="
+        Les plus belles peluches vintage cousues main	
+	 " />
+     
+    <!--????????????????-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+
+    <!--styles css-->
+    <link rel="stylesheet" href="../../frontend/css/style.css" />
+
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="../../../backend/images/faviconOurs.png" />
+
+    <!--réduire le temps de connexion-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!--googleFontAPI-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../frontend/script/panier.js" defer ></script>
+  
+    <title>Orinoco, les oursons vintage faits main</title>
+  </head>
+<body>
+   
+
+  
+
+    <!-- barre de navigation
+   <nav class="barreDeNavigation">
+       <div class="justifyBarreDeNavigation">
+            <img src="../../../backend/images/logo250X115Petit.jpg" alt="logo Orinoco">
+              <div class="boutonPanier" >
+                <span class="iconeDeNavigation">
+                    <a  class="linkFavoris" href="../favorisProduits/favoris.html" title="Vos Favoris">
+                        <i class="fas fa-star"></i>      
+                    </a>
+                </span>    
+       </div>   
+   </nav>-->
+<!--Fin de la navbarre-->
+  <!-- barre de navigation-->
+  <nav class="barreDeNavigation">
+    <div class="justifyBarreDeNavigation">
+         <img src="../../../backend/images/logo250X115Petit.jpg" alt="logo Orinoco">
+            <button class="boutonPanier" 
+            type="button" >   
+            </button>   
+            <div class="navigation " id="navbarScroll">
+                <ul class="listNav">
+                    <li class="itemNav">
+                        <a class="linkNav active"  href="index.html">Accueil</a>
+                    </li>
+                    <li class="itemNav">
+                        <a class="linkNav active" href="panier.html" id="basketPreview">Panier</a>
+                    </li>
+                </ul>
+            </div>
+</nav>
+<!--Fin de la navbarre-->
+
+
+<main>
+    <div class="container">
+        <div class="cart-card">
+            <h2 class="cart">Votre panier</h2>
+            <div class="cart-card__recap">
+                <div class="cart-card__recap__row ">
+                    <div class="cart-card__recap__title first-line"></div>
+                    <div class="cart-card__recap__title title-quantity first-line"></div>
+                    <div class="cart-card__recap__title data-price first-line"> </div>
+                    <div class="cart-card__recap__title data-img first-line"> </div>
+
+
+                </div>                     
+                <div class="width-to-empty-cart">
+                    <a href="./Index.html">
+                        <button type="button" class="cart-card__form__button to-empty-cart">
+                            Vider le panier
+                        </button>
+                    </a>
+                </div>
+                <h2 class="total"></h2>            
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cart-card__form">
+        <h2>Votre adresse de livraison</h2>
+        <form class="form">
+            <div class="name-and-lastname">
+                <div class="cart-card__form-line" id="bloc__name">
+                    <label for="name">Prénom :</label>
+                    <input type="text" placeholder="Prénom" id="name" name="user_name" required> 
+                </div>
+                <div class="cart-card__form-line" id="bloc__lastname">
+                    <label for="lastname">Nom :</label>
+                    <input type="text" placeholder="Nom" id="lastname" name="user_lastname" required>
+                </div>
+            </div>        
+            <div class="postal-and-city">
+                <div class="cart-card__form-line" id="bloc__postal">
+                    <label for="postal">Code postal :</label>
+                    <input type="text" placeholder="Code postal" id="postal" name="user_postal" required>
+                </div>
+                <div class="cart-card__form-line" id="bloc__city">
+                    <label for="city">Ville :</label>
+                    <input type="text" placeholder="Ville" id="city" name="user_city" required>
+                </div>
+            </div>
+            <div class="cart-card__form-line" id="bloc__adress">
+                <label for="adress">Adresse :</label>
+                <input type="text" placeholder="Adresse de livraison" id="adress" name="user_adress" required>
+            </div>
+            <div class="cart-card__form-line" id="bloc__mail">
+                <label for="mail">Adresse mail :</label>
+                <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
+            </div>
+            <div class="cart-card__form-line" id="bloc__phone">
+                <label for="phone" >Numéro de téléphone :</label>
+                <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" required >
+            </div>
+            <div class="erreur"></div>
+            <div class="cart-card__form__buttons">
+                    <div id="submit" class="cart-card__form__button to-pay" >Commander</div>
+            </div>
+        </form>
+
+        <div class="added-to-cart-confirmation">
+            <p class="confirmation-text"></p>
+        </div>
+        
+        
+    </div>
+    
+    </div>
+    </main>
+            <!--footer-->
+  <footer class="all-footer">
+    <div class="a-propos">
+      <h4>A propos</h4>
+
+      <div class="footer-1">
+        <a href="#">Fonctionnement du site</a>
+        <a href="#">Conditions générales de vente</a>
+        <a href="#">Données et confidentialité</a>
+      </div>
+    </div>
+
+    <div class="engagements">
+      <h4>Nos engagements</h4>
+
+      <div class="footer-2">
+        <a href="#">Charte qualité</a>
+      </div>
+    </div>
+
+    <div class="assistance">
+      <h4>Assistance et réparations</h4>
+
+      <div class="footer-3">
+        
+        <a href="#">Nous contacter</a>
+      </div>
+    </div>
+
+  </footer>
+   <!--font awesome-->
+   <script src="https://kit.fontawesome.com/19a015738e.js" crossorigin="anonymous"></script>
+    <!--js-->
+
+   
+
+    
+    
+    
+
+
+
+</body>
+</html>

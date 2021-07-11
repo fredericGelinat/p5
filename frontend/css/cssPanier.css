@@ -1,0 +1,267 @@
+/* sytles du panier avant confirmation achat*/
+
+/* .cart-card__recap{
+    background-color: #804fb6;
+  } */
+
+  @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+
+a{
+    text-decoration: none;
+}
+/* --------------- Navbar ---------------- */
+.barreDeNavigation {
+    position: sticky;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*background: url("../../backend/images/teddy_2.jpg") center/cover no-repeat;*/
+    background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);
+    z-index: 1;
+  }
+.barreDeNavigation img{
+    border-radius: 23%;
+}
+.justifyBarreDeNavigation {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+
+
+.navigation ul {
+  position: ABSOLUTE;
+  cursor: pointer;
+  TOP: 38%;
+  RIGHT: 15%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  }
+
+  .itemNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 4REM;
+    FONT-SIZE: xx-large;
+  }
+.panierItems {
+  position: absolute;
+  top: 39%;
+  right: 13%;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+  }
+
+
+  *,
+  ::before ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Josefin sans";
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #352208;
+  }
+  
+  h1 {
+    font-family: "MV Boli";
+  }
+  
+
+
+/* recap lignes resumé panier*/
+  .cart-card__recap__row{
+      border: 5px solid rgb(212, 113, 113);
+      display: flex;
+      /* justify-content: center; */
+  }
+
+.product-row{
+    background-color: #bc95e7;
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-row .cart-card__recap__title{
+    width: 25vh;
+    border: 1px solid salmon;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+  /* formulaire*/
+  .cart-card__form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #352208;
+    height: 100%;
+    background-color: #804fb6;
+  }
+  
+   .cart-card__form .form {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+   .cart-card__form .name-and-lastname {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+   .cart-card__form .postal-and-city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  
+  .cart-card__form .cart-card__form-line {
+    margin: 5px 0px;
+  }
+  
+   .cart-card__form .cart-card__form-line label {
+    display: none;
+  }
+  
+  .cart-card__form .cart-card__form-line {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+   .cart-card__form #bloc__phone {
+    width: 100%;
+  }
+   .cart-card__form #bloc__mail {
+    width: 100%;
+  }
+  
+   .cart-card__form #bloc__mail input[type="text"] {
+    margin: 10px;
+  }
+  
+   .cart-card__form #bloc__mail #bloc__adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  
+  .cart-card__form__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  
+   .cart-card__form__quantity {
+    margin-bottom: 20px;
+  }
+  
+   .cart-card__form__color {
+    margin-bottom: 40px;
+  }
+  
+  .cart-card__form .cart-card__form__button {
+    padding: 20px;
+    background: #e1bb80;
+    border-radius: 5px;
+    border: solid 1px #352208;
+  }
+   .cart-card__form .erreur {
+    padding: 5px 0;
+    color: red;
+  }
+  
+   .cart-card__form .to-pay {
+    font-family: Josefin Sans;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  
+   .cart-card__form .to-pay:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  

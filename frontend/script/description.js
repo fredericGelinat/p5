@@ -133,8 +133,43 @@ function afficherProduit() {
 
 
   }
+
+
+  //centrer la description
+
+  // let centreDescription = document.querySelector('')
   
-  
+  // carte tournante //
+  const cartes = document.querySelectorAll('.carte');
+
+let carteRetournee = false;
+let premiereCarte, secondeCarte;
+let verouillage = false;
+
+cartes.forEach(carte => {
+    carte.addEventListener('click', retourneCarte)
+})
+
+function retourneCarte(){
+
+    if(verouillage) return;
+
+    this.childNodes[1].classList.toggle('active');
+
+    if(!carteRetournee){
+
+        carteRetournee = true;
+        premiereCarte = this;
+        return;
+    }
+
+    carteRetournee = false;
+    secondeCarte = this;
+
+     console.log(premiereCarte, secondeCarte);
+
+    
+}
 
 
 // /* local Storage création d'une variable produitsEnregistrésDansLocalStorage*/

@@ -127,7 +127,7 @@ a {
     letter-spacing: var(--mainSpacing);
   }
   .cartContaineur{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin-left: 20%;
@@ -140,7 +140,7 @@ a {
     max-width: 1170px;
     display: grid;
     /* je veux que la colone soit au minimum 260px (responsive)+ AUTOFIT = prend toute la place restante != autofill*/
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-column-gap: 1.5rem;
     grid-row-gap: 2rem;
     border: turquoise;

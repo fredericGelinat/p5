@@ -91,7 +91,8 @@ function afficherPanier() {
       cartePanier.style.display = "flex";
       cartePanier.style.flexDirection = "column";
       cartePanier.style.justifyContent = "space-around";
-      cartePanier.style.backgroundColor = "#cb3d3d"
+      cartePanier.style.backgroundColor = "rgb(212, 113, 113)";
+      cartePanier.style.alignItems = "center";
      // panierVide.style.display = "none";
     }
   
@@ -125,38 +126,72 @@ function afficherPanier() {
         currency: "EUR",
       }).format(copyOfLS[produit].price * copyOfLS[produit].quantity);
     }
+}
+
+
+function sommeTotalPanier() {
+  let arrayOfPrice = [];
+  let totalPrice = document.querySelector(".total");
+
+  // On push chaque prix du DOM dans un tableau
+  let productPriceAccordingToQuantity = document.querySelectorAll(".price");
+  for (let price in productPriceAccordingToQuantity) {
+    arrayOfPrice.push(productPriceAccordingToQuantity[price].innerHTML);
   }
-  function sommeTotalPanier() {
-    let tableauDePrix= [0];
-    let prixTotal = document.getElementsByClassName(".total");
-  
-    // On push chaque prix du DOM dans un tableau
-    let prixProduitSelonQuantite = document.querySelectorAll(".price");
-    for (let price in prixProduitSelonQuantite) {
-      tableauDePrix.push(prixProduitSelonQuantite[price].innerHTML);
+
+  // On enlève les undefined du tableau
+  arrayOfPrice = arrayOfPrice.filter((el) => {
+    return el != undefined;
+  });
+
+  // Transformer en nombre chaque valeur du tableau
+  arrayOfPrice = arrayOfPrice.map((x) => parseFloat(x));
+
+  // Additionner les valeurs du tableau pour avoir le prix total
+  const reducer = (acc, currentVal) => acc + currentVal;
+  arrayOfPrice = arrayOfPrice.reduce(reducer);
+
+  // Affichage du prix avec formatage €
+  totalPrice.innerText = `Total : ${(arrayOfPrice = new Intl.NumberFormat(
+    "fr-FR",
+    {
+      style: "currency",
+      currency: "EUR",
     }
+  ).format(arrayOfPrice))}`;
+}
+  // function sommeTotalPanier() {
+  //   let tableauDePrix= [];
+  //   let prixTotal = document.getElementsByClassName(".total");
   
-    // On enlève les undefined du tableau
-    tableauDePrix = tableauDePrix.filter((el) => {
-      return el != undefined;
-    });
+  //   // On push chaque prix du DOM dans un tableau
+  //   let prixProduitSelonQuantite = document.querySelectorAll(".price");
+  //   for (let price in prixProduitSelonQuantite) {
+  //     tableauDePrix.push(prixProduitSelonQuantite[price].innerHTML);
+  //   }
   
-    // Transformer en nombre chaque valeur du tableau
-    tableauDePrix = tableauDePrix.map((x) => parseFloat(x));
+  //   // On enlève les undefined du tableau
+  //   tableauDePrix = tableauDePrix.filter((el) => {
+  //     return el != undefined;
+  //   });
   
-     //Additionner les valeurs du tableau pour avoir le prix total
-     const reducer = (acc, currentVal) => acc + currentVal;
-     tableauDePrix = tableauDePrix.reduce(reducer);
+  //   // Transformer en nombre chaque valeur du tableau
+  //   tableauDePrix = tableauDePrix.map((x) => parseFloat(x));
   
-    // Affichage du prix avec formatage €
-    prixTotal.innerText = `Total : ${(tableauDePrix = new Intl.NumberFormat(
-      "fr-FR",
-      {
-        style: "currency",
-        currency: "EUR",
-      }
-    ).format(tableauDePrix))}`;
-  }
+  //    //Additionner les valeurs du tableau pour avoir le prix total
+  //    const reducer = (acc, currentVal) => acc + currentVal;
+  //    tableauDePrix = tableauDePrix.reduce(reducer);
+  
+  //   // Affichage du prix avec formatage €
+  //   prixTotal.innerText = `Total : ${(tableauDePrix = new Intl.NumberFormat(
+  //     "fr-FR",
+  //     {
+  //       style: "currency",
+  //       currency: "EUR",
+  //     }
+  //   ).format(tableauDePrix))}`;
+  // }
+
 
   function viderlePanier() {
     // let li = document.getElementsByTagName("li");
@@ -175,6 +210,9 @@ function afficherPanier() {
     //   localStorage.clear();
     // });
   }
+
+
+
 
 
 

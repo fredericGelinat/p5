@@ -1,8 +1,7 @@
 /* sytles du panier avant confirmation achat*/
-
-/* .cart-card__recap{
+ .cart-card__recap{
     background-color: #804fb6;
-  } */
+  } 
 
   @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
@@ -108,30 +107,35 @@ a{
 
 .product-row{
     background-color: #bc95e7;
-    /* width: 100vw; */
+     width: 8vw; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .product-row .cart-card__recap__title{
     width: 25vh;
-    border: 1px solid salmon;
+    border: 1px solid rgb(212, 113, 113);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 
-
+/* .priceTotal{
+  background-color: turquoise;
+  height: 10vh;
+  display: inline;
+  position: absolute;
+} */
 
 
   /* formulaire*/
 
   .box-login {
     flex-shrink: 0;
-    background: #fff;
+background-color: #bc95e7;
     border-radius: 5px;
-    background: #3c3c3c;
+    /* background: #3c3c3c; */
     height: 80vh;
     display: flex;
     justify-content: center;

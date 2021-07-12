@@ -1,6 +1,76 @@
 let cart = document.querySelector(".cart-card__recap");
 let copyOfLS = JSON.parse(localStorage.getItem("products"));
 
+const inpUtilisateur = document.querySelector('.form-groupe:nth-child(1) input');
+const inpMail = document.querySelector('.form-groupe:nth-child(2) input');
+const inpAdr = document.querySelector('.form-groupe:nth-child(3) input');
+const inpTel = document.querySelector('.form-groupe:nth-child(4) input');
+
+const allImg = document.querySelectorAll('.icone-verif');
+const allSpan = document.querySelectorAll('span');
+
+
+inpUtilisateur.addEventListener('input', (e) => {
+
+  if(e.target.value.length >= 3) {
+      allImg[0].style.display = "inline";
+      allImg[0].src = "../frontend/ressources/check.svg";
+      allSpan[0].style.display = "none";
+  }   
+  else {
+      allImg[0].style.display = "inline";
+      allImg[0].src = "../frontend/ressources/error.svg";
+      allSpan[0].style.display = "inline";
+  }
+
+})
+inpAdr.addEventListener('input', (e) => {
+
+  if(e.target.value.length >= 3) {
+      allImg[2].style.display = "inline";
+      allImg[2].src = "../frontend/ressources/check.svg";
+      allSpan[2].style.display = "none";
+  }   
+  else {
+      allImg[2].style.display = "inline";
+      allImg[2].src = "../frontend/ressources/error.svg";
+      allSpan[2].style.display = "inline";
+  }
+
+})
+inpTel.addEventListener('input', (e) => {
+
+  if(e.target.value.length >= 10) {
+      allImg[3].style.display = "inline";
+      allImg[3].src = "../frontend/ressources/check.svg";
+      allSpan[3].style.display = "none";
+  }   
+  else {
+      allImg[3].style.display = "inline";
+      allImg[3].src = "../frontend/ressources/error.svg";
+      allSpan[3].style.display = "inline";
+  }
+
+})
+inpMail.addEventListener('input', (e) => {
+
+  const regexEmail = /\S+@\S+\.\S+/;
+  
+  if(e.target.value.search(regexEmail) === 0){
+
+      allImg[1].style.display = "inline";
+      allImg[1].src = "ressources/check.svg";
+      allSpan[1].style.display = "none";
+
+  } else if(e.target.value.search(regexEmail) === -1) {
+
+      allImg[1].style.display = "inline";
+      allImg[1].src = "ressources/error.svg";
+      allSpan[1].style.display = "inline";
+
+  }
+
+})
 affichageDescription();
 
 function affichageDescription() {

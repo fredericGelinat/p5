@@ -1,0 +1,115 @@
+/*---------------------footer------------------*/
+
+footer{
+    background-color: #dfb3f5;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-top: 5px dashed rgb(233, 36, 233);
+    width: 100%;
+    color: #3b392d;
+  }
+  .contenuFooter{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+  }
+  
+  
+  
+  .bloc{
+    width: 25%;
+    margin: 0 30px;
+  
+  }
+  
+  /*contact*/
+  .blocFooterContact h3,
+  .blocFooterServices h3,
+  .blocFooterReseaux h3,
+  .blocFooterHoraires h3{
+  
+  font-size: 25px;
+  padding-bottom: 20px;
+  }
+  
+  .blocFooterContact p{
+    padding: 5px 0;
+  }
+  
+  
+  /* services*/
+  
+  .listeReseaux,
+  .listeServices,
+  .listeHoraires{
+    
+    list-style-type: none;
+  
+  }
+  
+  .listeServices li{
+  
+    padding: 2px 0;
+  }
+  
+  .listeServices a {
+    text-decoration: none;
+    color: #cf7676;
+  }
+  
+  .listeServices a:hover{
+    color: aqua;
+  }
+  
+  .listeReseaux{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  /* MEDIA QUERIES*/
+  @media screen and (max-width : 1300px) {
+    .contenuFooter{
+      width: 700px;
+      flex-wrap: wrap;
+    }
+    .bloc{
+      width: 40%;
+      margin: 0 0;
+  
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2){
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media screen and (max-width : 800px){
+  
+    .contenuFooter{
+      width: 320px;
+      
+    }
+    .bloc{
+      width: 300px;
+      margin: 30px 30px;
+    }
+  
+    .bloc:nth-child(1),
+    .bloc:nth-child(2){
+      margin-bottom: 30px;
+    }
+    .bloc:nth-child(1){
+      margin-top: 0;
+    }
+  
+  
+  
+  }

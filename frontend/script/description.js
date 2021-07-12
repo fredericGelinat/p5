@@ -28,7 +28,7 @@ function affichageDescription(){
 
 function erreur404(){
     window.addEventListener("error", (e) =>{
-        let couvertureDeLaCart = document.querySelector("couvertureDeLaCart");
+        let couvertureDeLaCart = document.querySelector("main");
         couvertureDeLaCart.innerHTML = `<h1 class="erreurMessage">Erreur 404 
         <a class="retourHomeLink" href="index.html">Retourner dans la boutique ?</a></h1>`;
         couvertureDeLaCart.style.padding ="50vh 1";
@@ -79,7 +79,7 @@ function afficherProduit() {
   }
  
   function ajoutPanier() {
-    const boutonAjoutPanier = document.querySelector(".add-to-cart");
+    const boutonAjoutPanier = document.querySelector("button");
     const confirmation = document.querySelector(".added-to-cart-confirmation");
     const textConfirmation = document.querySelector(".confirmation-text");
     

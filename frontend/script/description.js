@@ -1,42 +1,37 @@
-/*const cartAccueilClick = document.querySelector('.justifyProduits');
-const pageDescription = [`${id}`];
-cartAccueilClick.addEventListener('click', (e) =>  {
-    e.preventDefault(); //empeche l'actualisation de la page
-  
-});*/
 
-let params = (new URL(document.location)).searchParams;
-let _id = params.get('id'); // searchParamas = va chercher cet id specifique dans l'api et pas un autre.
+
+ let params = (new URL(document.location)).searchParams;
+  let _id = params.get('id'); // searchParamas = va chercher cet id specifique dans l'api et pas un autre.
 
 //index des const utilisées, document= DOM, querySelector = va chercher cette class ou cette id
 const imgCartDescription = document.querySelector(".imgUrl");
 const nomCartDescription = document.querySelector(".nameProduit");
 const detailsCartDescription = document.querySelector(".detailsProduit");
 const prixCartDescription = document.querySelector(".prixProduit");
-const nombreDOursonCartDesription = document.querySelector(".quantiteProduit");
+const nombreDOursonCartDesription = document.querySelector("#nombreDOurson");
 const couleurCarteDescription = document.querySelector(".couleurProduit");
 
 affichageDescription ();
 
 function affichageDescription(){
-    erreur404();
+    //erreur404();
     afficherProduit();
     ajoutPanier();
 }
 
-function erreur404(){
-    window.addEventListener("error", (e) =>{
-        let couvertureDeLaCart = document.querySelector("main");
-        couvertureDeLaCart.innerHTML = `<h1 class="erreurMessage">Erreur 404 
-        <a class="retourHomeLink" href="index.html">Retourner dans la boutique ?</a></h1>`;
-        couvertureDeLaCart.style.padding ="50vh 1";
-        couvertureDeLaCart.style.fontSize = "50px";
-        let retourHomeLink = document.querySelector(".retourHomeLink");
-        retourHomeLink.style.textDecoration = "underline";
-    },
-    true
-  );
-}
+// function erreur404(){
+//     window.addEventListener("error", (e) =>{
+//         let couvertureDeLaCart = document.querySelector("main");
+//         couvertureDeLaCart.innerHTML = `<h1 class="erreurMessage">Erreur 404 
+//         <a class="retourHomeLink" href="index.html">Retourner dans la boutique ?</a></h1>`;
+//         couvertureDeLaCart.style.padding ="50vh 1";
+//         couvertureDeLaCart.style.fontSize = "50px";
+//         let retourHomeLink = document.querySelector(".retourHomeLink");
+//         retourHomeLink.style.textDecoration = "underline";
+//     },
+//     true
+//   );
+// }
 
   
 function afficherProduit() {
@@ -77,7 +72,7 @@ function afficherProduit() {
   }
  
   function ajoutPanier() {
-    const boutonAjoutPanier = document.querySelector("button");
+    const boutonAjoutPanier = document.querySelector(".add-to-cart");
     const confirmation = document.querySelector(".added-to-cart-confirmation");
     const textConfirmation = document.querySelector(".confirmation-text");
     

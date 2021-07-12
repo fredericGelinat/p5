@@ -83,87 +83,89 @@ function affichageDescription(){
 
 
 
-// // Récupérer les articles depuis l'API
- function afficherProduit()    {  
+// // // Récupérer les articles depuis l'API
+//  function afficherProduit()    {  
  
- fetch("http://localhost:3000/api/teddies")
-       .then(function (res) {
-         return res.json();
-       })
-       .catch((error) => {
-         let produitsContainer = document.querySelector(".produitsContainer");
-         produitsContainer.innerHTML =
-           "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
-           produitsContainer.style.textAlign = "center";
-           produitsContainer.style.padding = "30vh 0";
-       })
+//  fetch("http://localhost:3000/api/teddies")
+//        .then(function (res) {
+//          return res.json();
+//        })
+//        .catch((error) => {
+//          let produitsContainer = document.querySelector(".produitsContainer");
+//          produitsContainer.innerHTML =
+//            "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+//            produitsContainer.style.textAlign = "center";
+//            produitsContainer.style.padding = "30vh 0";
+//        })
   
-       // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
-       .then(function (resultatAPI) {
-         const articles = resultatAPI;
-         console.log(articles);
-         for (let teddies in articles) {
-           let produitCard = document.createElement("div");
-           document.querySelector(".justifyProduits").appendChild(produitCard);
-           produitCard.classList.add("produit");
+//        // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
+//        .then(function (resultatAPI) {
+//          const articles = resultatAPI;
+//          console.log(articles);
+//          for (let teddies in articles) {
+//            let produitCard = document.createElement("div");
+//            document.querySelector(".justifyProduits").appendChild(produitCard);
+//            produitCard.classList.add("produit");
            
-           let produitLink = document.createElement("a");
-           produitCard.appendChild(produitLink);
-           produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
-           produitLink.classList.add("stretched-link");
+//            let produitLink = document.createElement("a");
+//            produitCard.appendChild(produitLink);
+//            produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
+//            produitLink.classList.add("stretched-link");
            
+//            let produitImgDiv = document.createElement("div");
+//            //         produitLink.appendChild(produitImgDiv);
+//            //         produitImgDiv.classList.add("product__img");
+//                      produitLink.appendChild(produitImgDiv);
+//                       produitImgDiv.classList.add("product__img");
            
-                     produitLink.appendChild(produitImgDiv);
-                      produitImgDiv.classList.add("product__img");
+//                      let produitImg = document.createElement("div");
+//                       produitImgDiv.appendChild(produitImg);
+//                       produitImg.src = resultatAPI[teddies].imageUrl;
            
-                     let produitImgDiv = document.createElement("div");
-                      produitImgDiv.appendChild(produitImg);
-                      produitImg.src = resultatAPI[teddies].imageUrl;
+//                     //  let produitImg = document.createElement("img");
+//                       let produitPanierButton = document.createElement('button');
+//                       produitPanierButton.appendChild(produitPanier);
+//                       produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil">Ajouter au panier </h4> `
            
-                     let produitImg = document.createElement("img");
-           
-                      produitPanierButton.appendChild(produitPanier);
-                      produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil">Ajouter au panier </h4> `
-           
-                     let produitPanier = document.createElement([type = "submit"]);
-                      produitPanier.appendChild(produitLinkAjoutPanier);
-                      produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
-                      // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
-                     let produitLinkAjoutPanier = document.createElement("a");
+//                      let produitPanier = document.createElement([type = "submit"]);
+//                       produitPanier.appendChild(produitLinkAjoutPanier);
+//                       produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
+//                       // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
+//                      let produitLinkAjoutPanier = document.createElement("a");
 
-}
+// }
 
-           produitLinkAjoutPanier.classList.add("stretched-link");
+//            produitLinkAjoutPanier.classList.add("stretched-link");
 
 
-           produitLink.appendChild(produitInfosDiv);
-           produitInfosDiv.classList.add("product__infos");
-           let produitInfosDiv = document.createElement("div");
-           let produitInfoTitle = document.createElement("div");
-           produitInfosDiv.appendChild(produitInfoTitle);
-           produitInfoTitle.classList.add("product__infos__title");
-           produitInfoTitle.innerHTML = resultatAPI[teddies].name;
+//            produitLink.appendChild(produitInfosDiv);
+//            produitInfosDiv.classList.add("product__infos");
+//            let produitInfosDiv = document.createElement("div");
+//            let produitInfoTitle = document.createElement("div");
+//            produitInfosDiv.appendChild(produitInfoTitle);
+//            produitInfoTitle.classList.add("product__infos__title");
+//            produitInfoTitle.innerHTML = resultatAPI[teddies].name;
   
-           let produitInfoPrice = document.createElement("div");
-           produitInfosDiv.appendChild(produitInfoPrice);
-           produitInfoPrice.classList.add("product__infos__price");
+//            let produitInfoPrice = document.createElement("div");
+//            produitInfosDiv.appendChild(produitInfoPrice);
+//            produitInfoPrice.classList.add("product__infos__price");
 
-           // let produitSelectionButton = document.createElement("button");
-           //  produitInfosDiv = appendChild(produitSelectionButton);
-           //  produitSelectionButton.classList.add("product__infos__button")
+//            // let produitSelectionButton = document.createElement("button");
+//            //  produitInfosDiv = appendChild(produitSelectionButton);
+//            //  produitSelectionButton.classList.add("product__infos__button")
   
-           // Formatage du prix pour l'afficher en euros
-           resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
-           produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
-             style: "currency",
-             currency: "EUR",
-           }).format(resultatAPI[teddies].price);
+//            // Formatage du prix pour l'afficher en euros
+//            resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
+//            produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
+//              style: "currency",
+//              currency: "EUR",
+//            }).format(resultatAPI[teddies].price);
 
 
 
           
-         });
-       };
+//          });
+//        };
   
 // Récupérer les articles depuis l'API
 function afficherProduit() {
@@ -206,11 +208,11 @@ function afficherProduit() {
 
         let produitPanierButton = document.createElement("button");
         produitLink.appendChild(produitPanierButton);
-        produitPanierButton.classList.add("product__button");
+        produitPanierButton.classList.add("product__button__panier");
         
         let produitPanier = document.createElement([type = "submit"]);
         produitPanierButton.appendChild(produitPanier);
-        produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil"> Détails</h4> `
+        produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil"> Détails / Commander</h4> `
 
         let produitLinkAjoutPanier = document.createElement("a");
         produitPanier.appendChild(produitLinkAjoutPanier);
@@ -373,229 +375,232 @@ function afficherProduit() {
 */
 
 
-affichageDescription ();
+//affichageDescription ();
 
-function affichageDescription(){
+/*//function affichageDescription(){
     //erreur404();
     afficherProduit();
     afficherProduit();
     //ajoutPanier();
-}
+}*/
 
 
 
 
 
 
-// Récupérer les articles depuis l'API
-function afficherProduit() {
-    fetch("http://localhost:3000/api/teddies")
-      .then(function (res) {
-        return res.json();
-      })
-      /*.catch((error) => {
-        let produitsContainer = document.querySelector(".produitsContainer");
-        produitsContainer.innerHTML =
-          "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
-          produitsContainer.style.textAlign = "center";
-          produitsContainer.style.padding = "30vh 0";
-      })*/
+// // Récupérer les articles depuis l'API
+// function afficherProduit() {
+//     fetch("http://localhost:3000/api/teddies")
+//       .then(function (res) {
+//         return res.json();
+//       })
+//       /*.catch((error) => {
+//         let produitsContainer = document.querySelector(".produitsContainer");
+//         produitsContainer.innerHTML =
+//           "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+//           produitsContainer.style.textAlign = "center";
+//           produitsContainer.style.padding = "30vh 0";
+//       })*/
   
-      // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
-      .then(function (resultatAPI) {
-        const articles = resultatAPI;
-        console.log(articles);
-        for (let teddies in articles) {
-          let produitCard = document.createElement("div");
-          document.querySelector(".justifyProduits").appendChild(produitCard);
-          produitCard.classList.add("produit");
+//       // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
+//       .then(function (resultatAPI) {
+//         const articles = resultatAPI;
+//         console.log(articles);
+//         for (let teddies in articles) {
+//           let produitCard = document.createElement("div");
+//           document.querySelector(".justifyProduits").appendChild(produitCard);
+//           produitCard.classList.add("produit");
   
-          let produitLink = document.createElement("a");
-          produitCard.appendChild(produitLink);
-          produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
-          produitLink.classList.add("stretched-link");
+//           let produitLink = document.createElement("a");
+//           produitCard.appendChild(produitLink);
+//           produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
+//           produitLink.classList.add("stretched-link");
 
          
   
-          let produitImgDiv = document.createElement("div");
-          produitLink.appendChild(produitImgDiv);
-          produitImgDiv.classList.add("product__img");
+//           let produitImgDiv = document.createElement("div");
+//           produitLink.appendChild(produitImgDiv);
+//           produitImgDiv.classList.add("product__img");
   
-          let produitImg = document.createElement("img");
-          produitImgDiv.appendChild(produitImg);
-          produitImg.src = resultatAPI[teddies].imageUrl;
+//           let produitImg = document.createElement("img");
+//           produitImgDiv.appendChild(produitImg);
+//           produitImg.src = resultatAPI[teddies].imageUrl;
 
 
-          let produitPanier = document.createElement([type = "submit"]);
-          produitPanierButton.appendChild(produitPanier);
-          produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil">Ajouter au panier </h4> `
+//           let produitPanier = document.createElement([type = "submit"]);
+//           produitPanierButton.appendChild(produitPanier);
+//           produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil">Ajouter au panier </h4> `
 
-          let produitLinkAjoutPanier = document.createElement("a");
-          produitPanier.appendChild(produitLinkAjoutPanier);
-          produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
-          // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
+//           let produitLinkAjoutPanier = document.createElement("a");
+//           produitPanier.appendChild(produitLinkAjoutPanier);
+//           produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
+//           // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
           
-          produitLinkAjoutPanier.classList.add("stretched-link");
-        }
+// //           produitLinkAjoutPanier.classList.add("stretched-link");
+// //         }
           
-
+// let produitLink = document.createElement("a");
+//         produitCard.appendChild(produitLink);
+//           produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
+//            produitLink.classList.add("stretched-link");
            
 
-          let produitInfosDiv = document.createElement("div");
-          produitLink.appendChild(produitInfosDiv);
-          produitInfosDiv.classList.add("product__infos");
+//           let produitInfosDiv = document.createElement("div");
+//           produitLink.appendChild(produitInfosDiv);
+//           produitInfosDiv.classList.add("product__infos");
   
-          let produitInfoTitle = document.createElement("div");
-          produitInfosDiv.appendChild(produitInfoTitle);
-          produitInfoTitle.classList.add("product__infos__title");
-          produitInfoTitle.innerHTML = resultatAPI[teddies].name;
+//           let produitInfoTitle = document.createElement("div");
+//           produitInfosDiv.appendChild(produitInfoTitle);
+//           produitInfoTitle.classList.add("product__infos__title");
+//           produitInfoTitle.innerHTML = resultatAPI[teddies].name;
   
-          let produitInfoPrice = document.createElement("div");
-          produitInfosDiv.appendChild(produitInfoPrice);
-          produitInfoPrice.classList.add("product__infos__price");
+//           let produitInfoPrice = document.createElement("div");
+//           produitInfosDiv.appendChild(produitInfoPrice);
+//           produitInfoPrice.classList.add("product__infos__price");
 
-          // let produitSelectionButton = document.createElement("button");
-          //  produitInfosDiv = appendChild(produitSelectionButton);
-          //  produitSelectionButton.classList.add("product__infos__button")
+//           // let produitSelectionButton = document.createElement("button");
+//           //  produitInfosDiv = appendChild(produitSelectionButton);
+//           //  produitSelectionButton.classList.add("product__infos__button")
   
-          // Formatage du prix pour l'afficher en euros
-          resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
-          produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
-            style: "currency",
-//             currency: "EUR",
-//           }).format(resultatAPI[teddies].price);
+//           // Formatage du prix pour l'afficher en euros
+//           resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
+//           produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
+//             style: "currency",
+// //             currency: "EUR",
+// //           }).format(resultatAPI[teddies].price);
 
 
 
           
-       })
-      })
-    };
-// Récupérer les articles depuis l'API
-function afficherProduit() {
-  fetch("http://localhost:3000/api/teddies")
-    .then(function (res) {
-      return res.json();
-    })
-    /*.catch((error) => {
-      let produitsContainer = document.querySelector(".produitsContainer");
-      produitsContainer.innerHTML =
-        "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
-        produitsContainer.style.textAlign = "center";
-        produitsContainer.style.padding = "30vh 0";
-    })*/
+//        })
+      
+    
+// // Récupérer les articles depuis l'API
+// function afficherProduit() {
+//   fetch("http://localhost:3000/api/teddies")
+//     .then(function (res) {
+//       return res.json();
+//     })
+//     /*.catch((error) => {
+//       let produitsContainer = document.querySelector(".produitsContainer");
+//       produitsContainer.innerHTML =
+//         "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+//         produitsContainer.style.textAlign = "center";
+//         produitsContainer.style.padding = "30vh 0";
+//     })*/
 
-    // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
-    .then(function (resultatAPI) {
-      const articles = resultatAPI;
-      console.log(articles);
-      for (let teddies in articles) {
-        let produitCard = document.createElement("div");
-        document.querySelector(".justifyProduits").appendChild(produitCard);
-        produitCard.classList.add("produit");
+//     // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
+//     .then(function (resultatAPI) {
+//       const articles = resultatAPI;
+//       console.log(articles);
+//       for (let teddies in articles) {
+//         let produitCard = document.createElement("div");
+//         document.querySelector(".justifyProduits").appendChild(produitCard);
+//         produitCard.classList.add("produit");
 
-        let produitLink = document.createElement("a");
-        produitCard.appendChild(produitLink);
-        produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
-        produitLink.classList.add("stretched-link");
+//         let produitLink = document.createElement("a");
+//         produitCard.appendChild(produitLink);
+//         produitLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
+//         produitLink.classList.add("stretched-link");
 
         
 
-        let produitImgDiv = document.createElement("div");
-        produitLink.appendChild(produitImgDiv);
-        produitImgDiv.classList.add("product__img");
+//         let produitImgDiv = document.createElement("div");
+//         produitLink.appendChild(produitImgDiv);
+//         produitImgDiv.classList.add("product__img");
 
-        let produitImg = document.createElement("img");
-        produitImgDiv.appendChild(produitImg);
-        produitImg.src = resultatAPI[teddies].imageUrl;
+//         let produitImg = document.createElement("img");
+//         produitImgDiv.appendChild(produitImg);
+//         produitImg.src = resultatAPI[teddies].imageUrl;
 
 
-         let produitDetailsButton = document.createElement("button");
-         produitLink.appendChild(produitDetailsButton);
-         produitDetailsButton.classList.add("product__button");
+//          let produitDetailsButton = document.createElement("button");
+//          produitLink.appendChild(produitDetailsButton);
+//          produitDetailsButton.classList.add("product__button");
         
-         let produitDetails = document.createElement([type = "submit"]);
-         produitDetailsButton.appendChild(produitDetails);
-         produitDetails.innerHTML = `<h4 class="AjouterAuPanierAccueil"> Détails</h4> `
-/*PRODUIT AJOUT PANIER*/
-        let produitPanierButton = document.createElement("button");
-        produitLink.appendChild(produitPanierButton);
-        produitPanierButton.classList.add("product__button");
+//          let produitDetails = document.createElement([type = "submit"]);
+//          produitDetailsButton.appendChild(produitDetails);
+//          produitDetails.innerHTML = `<h4 class="AjouterAuPanierAccueil"> Détails</h4> `
+// // /*PRODUIT AJOUT PANIER*/
+// //         let produitPanierButton = document.createElement("button");
+// //         produitLink.appendChild(produitPanierButton);
+// //         produitPanierButton.classList.add("product__button");
         
-        let produitPanier = document.createElement([type = "submit"]);
-        produitPanierButton.appendChild(produitPanier);
-        produitPanier.innerHTML = `<h4 class="AjouterAuPanier">Commander</h4> `
-        /* on link le produit vers la page panier*/
-        let produitLinkAjoutPanier = document.createElement('a');
-        produitPanier.appendChild(produitLinkAjoutPanier);
-        produitLinkAjoutPanier.href = `panier.html?id=${resultatAPI[teddies]._id}`;
-        produitLinkAjoutPanier.classList.add('stretched-link')
+// //         let produitPanier = document.createElement([type = "submit"]);
+// //         produitPanierButton.appendChild(produitPanier);
+// //         produitPanier.innerHTML = `<h4 class="AjouterAuPanier">Commander</h4> `
+//         /* on link le produit vers la page panier*/
+//         // let produitLinkAjoutPanier = document.createElement('a');
+//         // produitPanier.appendChild(produitLinkAjoutPanier);
+//         // produitLinkAjoutPanier.href = `panier.html?id=${resultatAPI[teddies]._id}`;
+//         // produitLinkAjoutPanier.classList.add('stretched-link')
 
 
 
-        /* on link le produit vers la page description*/
-        let produitLinkAjoutDescription = document.createElement("a");
-        produitDetails.appendChild(produitLinkAjoutDescription);
-        produitLinkAjoutDescription.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
-        // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
+//         /* on link le produit vers la page description*/
+//         let produitLinkAjoutDescription = document.createElement("a");
+//         produitDetails.appendChild(produitLinkAjoutDescription);
+//         produitLinkAjoutDescription.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
+//         // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
         
-        produitLinkAjoutDescription.classList.add("stretched-link");
+//         produitLinkAjoutDescription.classList.add("stretched-link");
       
         
 
          
 
-        let produitInfosDiv = document.createElement("div");
-        produitLink.appendChild(produitInfosDiv);
-        produitInfosDiv.classList.add("product__infos");
+//         let produitInfosDiv = document.createElement("div");
+//         produitLink.appendChild(produitInfosDiv);
+//         produitInfosDiv.classList.add("product__infos");
 
-        let produitInfoTitle = document.createElement("div");
-        produitInfosDiv.appendChild(produitInfoTitle);
-        produitInfoTitle.classList.add("product__infos__title");
-        produitInfoTitle.innerHTML = resultatAPI[teddies].name;
+//         let produitInfoTitle = document.createElement("div");
+//         produitInfosDiv.appendChild(produitInfoTitle);
+//         produitInfoTitle.classList.add("product__infos__title");
+//         produitInfoTitle.innerHTML = resultatAPI[teddies].name;
 
-        let produitInfoPrice = document.createElement("div");
-        produitInfosDiv.appendChild(produitInfoPrice);
-        produitInfoPrice.classList.add("product__infos__price");
+//         let produitInfoPrice = document.createElement("div");
+//         produitInfosDiv.appendChild(produitInfoPrice);
+//         produitInfoPrice.classList.add("product__infos__price");
 
 
-        let produitLinkPanier = document.createElement("a");
-        produitCard.appendChild(produitLinkPanier);
-        produitLinkPanier.href = `panier.html?id=${resultatAPI[teddies]._id}`;
-        produitLinkPanier.classList.add("stretched-link");
+//         let produitLinkPanier = document.createElement("a");
+//         produitCard.appendChild(produitLinkPanier);
+//         produitLinkPanier.href = `panier.html?id=${resultatAPI[teddies]._id}`;
+//         produitLinkPanier.classList.add("stretched-link");
 
-        let produitQuantiteDiv = document.createElement('div');
-        produitLinkPanier.appendChild(produitQuantiteDiv);
-        produitQuantiteDiv.classList.add('quantiteProduit');
+//         let produitQuantiteDiv = document.createElement('div');
+//         produitLinkPanier.appendChild(produitQuantiteDiv);
+//         produitQuantiteDiv.classList.add('quantiteProduit');
   
-        let produitQuantite = document.createElement("label");
-        produitQuantiteDiv.appendChild(produitQuantite);
-        produitQuantite.innerHTML = `Quantité :`;
+//         let produitQuantite = document.createElement("label");
+//         produitQuantiteDiv.appendChild(produitQuantite);
+//         produitQuantite.innerHTML = `Quantité :`;
 
-        let produitSelectionButton = document.createElement("button");
-         produitInfosDiv = appendChild(produitSelectionButton);
-         produitSelectionButton.classList.add("product__infos__button")
+//         let produitSelectionButton = document.createElement("button");
+//          produitInfosDiv.appendChild(produitSelectionButton);
+//          produitSelectionButton.classList.add("product__infos__button")
       
-        //Formatage du prix pour l'afficher en euros
-        resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
-        produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
-          style: "currency",
-          currency: "EUR",
-        }).format(resultatAPI[teddies].price);
-let nombreOursonLabel = document.createElement("label");
-produitLink.appendChild(nombreOursonLabel);
-nombreOursonLabel.classList.add("nombreDOursonCalcul");
+//         //Formatage du prix pour l'afficher en euros
+//         resultatAPI[teddies].price = resultatAPI[teddies].price / 100;
+//         produitInfoPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
+//           style: "currency",
+//           currency: "EUR",
+//         }).format(resultatAPI[teddies].price);
+// // let nombreOursonLabel = document.createElement("label");
+// // produitLink.appendChild(nombreOursonLabel);
+// // nombreOursonLabel.classList.add("nombreDOursonCalcul");
 
-let nombreOurson = document.createElement('div');
-nombreOursonLabel.appendChild(nombreOurson);
-// nombreOurson.classList.add('nombreDOurson' + [type="number"] + [value="1"] + [min="1"])
-        nombreOurson.innerHTML = `  <input id="nombreDOurson" type="number" name="nombreDOurson" value="1" min="1">
+// // let nombreOurson = document.createElement('div');
+// // nombreOursonLabel.appendChild(nombreOurson);
+// // // nombreOurson.classList.add('nombreDOurson' + [type="number"] + [value="1"] + [min="1"])
+// //         nombreOurson.innerHTML = `  <input id="nombreDOurson" type="number" name="nombreDOurson" value="1" min="1">
         
-        `
-      };
+// //         `
+//       };
     
-})
-    }
+// })
+//     }
 let params = (new URL(document.location)).searchParams;
 var _id = params.get('id'); // searchParamas = va chercher cet id specifique dans l'api et pas un autre.
 
@@ -717,10 +722,11 @@ const prixCartDescription = document.querySelector(".prixProduit");
     });
 
 
-
+  }
 
 
 
 
   
-    
+}
+  )}   

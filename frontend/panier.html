@@ -67,7 +67,9 @@
 </nav>
 <!--Fin de la navbarre-->
 
-
+<div class="if-empty-cart">
+    <h2>Votre panier est vide. <a href="index.html">Remplissez le d'abord !</a></h2>
+</div>
 <main>
     <div class="container">
         <div class="cart-card">
@@ -86,7 +88,7 @@
                 <div class="width-to-empty-cart">
                     <h2 class="total priceTotal"></h2>
                     <a href="./Index.html">
-                        <button type="button" class="cart-card__form__button to-empty-cart">
+                        <button type="button" class="cart-card__form__button empty-cart">
                            <div>Vider le panier</div> <div> / Page d'accueil</div>
                         </button>
                     </a>
@@ -95,8 +97,56 @@
         </div>
     </div>
 
-    
+    <div class="cart-card__form">
+        <h2>Votre adresse de livraison</h2>
+        <form class="form">
+            <div class="name-and-lastname">
+                <div class="cart-card__form-line" id="bloc__name">
+                    <label for="name">Prénom :</label>
+                    <input type="text" placeholder="Prénom" id="name" name="user_name" required> 
+                </div>
+                <div class="cart-card__form-line" id="bloc__lastname">
+                    <label for="lastname">Nom :</label>
+                    <input type="text" placeholder="Nom" id="lastname" name="user_lastname" required>
+                </div>
+            </div>        
+            <div class="postal-and-city">
+                <div class="cart-card__form-line" id="bloc__postal">
+                    <label for="postal">Code postal :</label>
+                    <input type="text" placeholder="Code postal" id="postal" name="user_postal" required>
+                </div>
+                <div class="cart-card__form-line" id="bloc__city">
+                    <label for="city">Ville :</label>
+                    <input type="text" placeholder="Ville" id="city" name="user_city" required>
+                </div>
+            </div>
+            <div class="cart-card__form-line" id="bloc__adress">
+                <label for="adress">Adresse :</label>
+                <input type="text" placeholder="Adresse de livraison" id="adress" name="user_adress" required>
+            </div>
+            <div class="cart-card__form-line" id="bloc__mail">
+                <label for="mail">Adresse mail :</label>
+                <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
+            </div>
+            <div class="cart-card__form-line" id="bloc__phone">
+                <label for="phone" >Numéro de téléphone :</label>
+                <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" required >
+            </div>
+            <div class="erreur"></div>
+            <div class="cart-card__form__buttons">
+                    <!-- <div id="submit" class="cart-card__form__button to-pay" >Commander</div> -->
+            
+                        <button type="submit" id="submit" class="cart-card__form__button to-pay">Création du compte</button>
+                    </div>
+        </form>
 
+        <div class="added-to-cart-confirmation">
+            <p class="confirmation-text"></p>
+        </div>
+        
+        
+    </div>
+<!-- 
         <h2>Inscrivez-vous.</h2>
         <div class="box-login">
         <form>
@@ -124,9 +174,12 @@
                 <img src="../frontend/ressources/check.svg" alt="icone de validation" class="icone-verif">
                 <span class="message-alerte">Rentrez un telephone valide de 10 chiffres.</span>
             </div>
-            
+            <div class="erreur"></div>
+                        <div class="cart-card__form__buttons">
+                                <div id="submit" class="cart-card__form__button to-pay" >Commander</div>
+                        </div> -->
     
-            <button type="submit">Création du compte</button>
+            <!-- <button type="submit" id="submit" class="cart-card__form__button to-pay">Création du compte</button> -->
         </form>
     
     </div>
@@ -181,7 +234,7 @@
         
         
     </div> -->
-    
+ 
     </div>
     </main>
             <!--footer-->

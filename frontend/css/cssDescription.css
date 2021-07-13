@@ -60,7 +60,7 @@ h1 {
   width: 77%;
   display: flex;
   flex-direction: row;
-  margin-left: 26%;
+  margin-left: 28.5%;
   margin-top: 8%;
 }
 .devant,.derriere{
@@ -132,9 +132,11 @@ h1 {
   WIDTH: 6rem;
   BORDER: 5PX SOLID BISQUE;
 }
-.add-to-cart{
+.panierDescriptionAjout{
   background: khaki;
-  color: indigo;
+  color: rgb(130, 0, 0);
+  font-size: 2rem;
+  margin: 4% 0;
 }
 #anchre{
   display: flex;

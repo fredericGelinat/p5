@@ -45,7 +45,92 @@ h1 {
 }
 /* carte tournante*/
 
-.grille {
+
+
+.carte {
+  cursor: pointer;
+  width: 28vw;
+  height: 25vh;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.devant,.derriere{
+  width: 100%;
+  height: 100%;
+  /* indique si la face cachée doit etre visible ou non*/
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+.devant img{
+  height: auto;
+  width: 100%;
+}
+.devant{
+  /* distance entre l'utilisateur et l'élément, si tu mets 6 c'est collé */
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.derriere{
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.contenu{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #2c3e50;
+  text-align: center;
+  width: 50%;
+}
+.carte:hover > .devant{
+  /* préciser perspective sinon il remplate par rotateY */
+  transform: perspective(600px) rotateY(-180deg);
+}
+.carte:hover > .derriere{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.couvertureDeLaCart article{
+  display: flex;
+}
+
+.nombreDOurson{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed #efff1e;
+    background: cadetblue;
+    padding: 0% 2%;
+    MARGIN: -1%;
+}
+#nombreDOurson{
+
+  WIDTH: 22%;
+    BORDER: 5PX SOLID BISQUE;
+}
+.color-select{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed #efff1e;
+    background: cadetblue;
+    padding: 0% 2%;
+    MARGIN: -1%; 
+}
+#color-select{
+  WIDTH: 6rem;
+  BORDER: 5PX SOLID BISQUE;
+}
+.add-to-cart{
+  background: khaki;
+  color: indigo;
+}
+/* .grille {
     background: hsl(269, 41%, 51%);
     display: grid;
     grid-template: 100px 1fr / 50px 1fr;
@@ -56,7 +141,7 @@ h1 {
 
 /* description /*/
 
-.detailsProduit{
+/*.detailsProduit{
     display: inline;
 }
 
@@ -99,14 +184,14 @@ h1 {
   }
   
   .face {
-    /* background: #333; */
+    /* background: #333; 
     transform: rotateY(180deg);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     /* background-image: url("../../backend/images/teddy_1.jpg"), 
     url("../../backend/images/teddy_2.jpg");
-    object-fit: cover; */
+    object-fit: cover; 
   }
   .face img {
     width: 34rem;
@@ -131,7 +216,21 @@ h1 {
 .descriptionTournante{
    color: snow;
 
+} 
+.product-card__infos__buttons
+{
+  margin-top: -0.3rem;
+  letter-spacing: var(--mainSpacing);
+ 
+  /* FONT-SIZE: 1REM; */
+  BORDER: 1PX SOLID rgb(177, 233, 23);
+  TEXT-ALIGN: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  BACKGROUND-COLOR: brown;
 }
-
 /* articles et produits notice */
 

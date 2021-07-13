@@ -23,7 +23,10 @@ footer{
   
   
   
-  .bloc{
+  .blocFooterContact ,
+  .blocFooterServices ,
+  .blocFooterReseaux ,
+  .blocFooterHoraires{
     width: 25%;
     margin: 0 30px;
   
@@ -80,13 +83,23 @@ footer{
       width: 700px;
       flex-wrap: wrap;
     }
-    .bloc{
+    .blocFooterContact ,
+    .blocFooterServices ,
+    .blocFooterReseaux ,
+    .blocFooterHoraires{
       width: 40%;
       margin: 0 0;
   
     }
-    .bloc:nth-child(1),
-    .bloc:nth-child(2){
+    .blocFooterContact:nth-child(1),
+    .blocFooterServices:nth-child(1),
+    .blocFooterReseaux:nth-child(1),
+    .blocFooterHoraires:nth-child(1)
+    ,
+    .blocFooterContact:nth-child(2),
+    .blocFooterServices:nth-child(2),
+    .blocFooterReseaux:nth-child(2),
+    .blocFooterHoraires:nth-child(2){
       margin-bottom: 50px;
     }
   }
@@ -97,16 +110,30 @@ footer{
       width: 320px;
       
     }
-    .bloc{
+    .blocFooterContact ,
+  .blocFooterServices ,
+  .blocFooterReseaux ,
+  .blocFooterHoraires
+{
       width: 300px;
       margin: 30px 30px;
     }
-  
-    .bloc:nth-child(1),
-    .bloc:nth-child(2){
+    .blocFooterContact:nth-child(1),
+    .blocFooterServices:nth-child(1),
+    .blocFooterReseaux:nth-child(1),
+    .blocFooterHoraires:nth-child(1)
+    ,
+    .blocFooterContact:nth-child(2),
+    .blocFooterServices:nth-child(2),
+    .blocFooterReseaux:nth-child(2),
+    .blocFooterHoraires:nth-child(2)
+    {
       margin-bottom: 30px;
     }
-    .bloc:nth-child(1){
+    .blocFooterContact:nth-child(1),
+    .blocFooterServices:nth-child(1),
+    .blocFooterReseaux:nth-child(1),
+    .blocFooterHoraires:nth-child(1){
       margin-top: 0;
     }
   

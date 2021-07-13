@@ -126,14 +126,19 @@ a {
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
   }
-  .cartContaineur{
+
+
+
+  /*************A RANGER DANS CARTE TOURNANTE PLUS BAS*/
+  .cartContaineur {
     width: 77%;
     display: flex;
     flex-direction: row;
-    margin-left: -2%;
-    margin-top: 3%;
+    margin-left: 15%;
+    margin-top: 8%;
+}
 
-  }
+  /*************A RANGER DANS CARTE TOURNANTE*/
   .justifyProduits {
     width: 100vw;
     margin: 0 auto;
@@ -230,7 +235,7 @@ a {
     background:transparent;
   }
   .imgUrl{
-    margin-left: 25%;
+    /* margin-left: 25%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -250,6 +255,29 @@ a {
 
 
   }
+
+
+/* bouton details/commander*/
+
+.product__button__panier {
+  background: aliceblue;
+  margin: 5px 55px;
+  font-size: large;
+  /* color: brown; */
+  border: dashed 1px royalblue;
+}
+
+/* .produit button{
+  /* display: flex;
+  justify-content: center;
+  flex-direction: row;  */
+  /* margin-left: 3rem;
+  background-color: blueviolet;
+  border: 1px dashed red;
+  border-radius: 25%;
+  font-size: larger;
+}  */
+
   .couleurProduit,
   .quantiteProduit,
   .product-card__infos__button,
@@ -271,11 +299,19 @@ a {
   }
   
   .produit h4 {
-    margin-top: 0.7rem;
+    margin-top: -0.3rem;
     letter-spacing: var(--mainSpacing);
-    color: var(--primaryColor);
-    text-align: center;
-  }
+    color: #d1f40ed9;
+    /* FONT-SIZE: 1REM; */
+    BORDER: 1PX SOLID;
+    TEXT-ALIGN: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 3%;
+    BACKGROUND-COLOR: brown;
+}
 
   .NomEtPrixCarte{
     display: flex;

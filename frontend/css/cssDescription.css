@@ -73,7 +73,7 @@ h1 {
 }
 .devant img{
   height: auto;
-  width: 100%;
+  width: 90%;
 }
 .devant{
   /* distance entre l'utilisateur et l'élément, si tu mets 6 c'est collé */

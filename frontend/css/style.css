@@ -241,7 +241,7 @@ a {
   }
   .product__img img{
     display: block;
-    width: 100%;
+    width: 94%;
     min-height: 12rem;
     transition: var(--mainTransition);
     border: rgb(224, 64, 163) 5px solid;

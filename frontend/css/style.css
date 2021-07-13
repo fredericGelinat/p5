@@ -130,13 +130,7 @@ a {
 
 
   /*************A RANGER DANS CARTE TOURNANTE PLUS BAS*/
-  .cartContaineur {
-    width: 77%;
-    display: flex;
-    flex-direction: row;
-    margin-left: 15%;
-    margin-top: 8%;
-}
+  
 
   /*************A RANGER DANS CARTE TOURNANTE*/
   .justifyProduits {

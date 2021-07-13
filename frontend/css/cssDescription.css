@@ -130,6 +130,12 @@ h1 {
   background: khaki;
   color: indigo;
 }
+#anchre{
+  display: flex;
+  justify-content: center;
+  border: aliceblue 1px solid;
+  background: aliceblue;
+}
 /* .grille {
     background: hsl(269, 41%, 51%);
     display: grid;

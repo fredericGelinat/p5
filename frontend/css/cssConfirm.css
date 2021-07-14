@@ -43,3 +43,17 @@
   .recap p span {
     font-weight: bold;
   }
+@media screen and (max-width: 1024px) {
+  .recap{
+    height: 47vh;
+}
+.justifyBarreDeNavigation {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+}

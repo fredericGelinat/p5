@@ -65,6 +65,8 @@ a {
   list-style-type: none;
   
   }
+
+
 .panierItems {
   position: absolute;
   top: 39%;
@@ -275,7 +277,7 @@ fin Navbar
   }
   .product__img img{
     display: block;
-    width: 94%;
+    width: 100%;
     min-height: 12rem;
     transition: var(--mainTransition);
     border: #3C254C 5px solid;
@@ -420,7 +422,84 @@ fin Navbar
 }
 
 
+/*++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++
+++++++++++++++++++++MEDIAqUERIES+++++++*/
 
+@media screen and (max-width: 360px) {
+/*  accueil */
+  .navigation ul {
+   right: 2%;
+    cursor: pointer;
+    
+    list-style-type: none;
+    
+    }
+    .header{
+      display: none;
+    }
+    #canvas1{
+      display: none;
+   
+     
+    }
+    .product__button__panier{
+      margin: 9% 16%;
+    }
+
+
+    /* description*/
+
+    .couvertureDeLaCart article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .couleurProduit, .quantiteProduit, .product-card__infos__button, .product__infos__price, .product__infos__title {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5% 0%;
+}
+.boutonPanier {
+  margin-right: 5%;
+  /* MARGIN: 5% -6%; */
+  POSITION: absolute;
+  right: -1%;
+  TOP: 12%;
+}
+
+} 
+
+@media screen and (max-width: 540px) {
+ 
+  .couvertureDeLaCart article {
+    display: flex;
+    flex-direction:column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boutonPanier {
+    position: absolute;
+    left: 70%;
+}
+  }
+
+@media screen and (max-width: 1024px) {
+ 
+.justifyBarreDeNavigation {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+}
+  
 
 
 

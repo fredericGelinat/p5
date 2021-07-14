@@ -253,3 +253,47 @@ button {
   color: #ffffc7 ;
   border-radius: 5%;
 }
+/*****************media queries*******************/
+
+@media screen and (max-width: 360px) {
+  
+  input {
+     display: block; 
+     margin: 10px 15px 20px 20px; 
+     outline: 0; 
+     background: rgb(226,226,226); 
+     width: 296px; 
+     border: 0; 
+     padding: 10px 12px; 
+     border-radius: 3px; 
+    font-size: 20px;
+     border: 1px solid rgba(0,0,0,0.3); 
+  }
+  .cart-card__form {
+    border: 5px dashed #473335;
+    margin: 5em 0 5em 0;
+    background-color: #ffa491;
+    WIDTH: 90%;
+}
+input {
+  display: block;
+  margin: 10px 15px 20px 20px;
+  outline: 0;
+  background: rgb(226,226,226);
+  width: 208px;
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 20px;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+  }
+
+  @media screen and (min-width: 540px) {
+    .cart-card__form {
+      border: 5px dashed #473335;
+      margin: 5em 4em 5em 0;
+      background-color: #ffa491;
+  }
+    }
+  

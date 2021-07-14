@@ -15,13 +15,13 @@ a{
 }
 
 
-*,
+/* *,
 ::before ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: "Josefin sans";
@@ -154,6 +154,7 @@ background-color: #3c254c;
   font-size: 3rem;
   margin: 4% 0;
   border-radius: 5%;
+  cursor: pointer;
 }
 .buttonAjouterPanier{
   margin-left: 23%;
@@ -172,88 +173,10 @@ background-color: #3c254c;
 .back-to-home{
   color: honeydew;
 }
-/* .grille {
-    background: hsl(269, 41%, 51%);
-    display: grid;
-    grid-template: 100px 1fr / 50px 1fr;
-    width: 6rem;
-    height: 5rem;
-    margin: 75px auto 0;
-  }
-
-/* description /*/
-
-/*.detailsProduit{
-    display: inline;
-}
-
-.carte {
-    background-color: transparent;
-    perspective: 1000px;
-    margin: 0px;
-    cursor: pointer;
-  }
-  
-  .double-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-   
-  }
-  
-   .pile {
-    position: absolute;
-    width: 15vw;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border: 5px solid salmon;
-    color: seashell;
-    border-radius: 3%;
-  
-  }
-  .pile:hover {
-      color: rgb(56, 179, 216);
-  }
-  .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-  
-  .face {
-    /* background: #333; 
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* background-image: url("../../backend/images/teddy_1.jpg"), 
-    url("../../backend/images/teddy_2.jpg");
-    object-fit: cover; 
-  }
-  .face img {
-    width: 34rem;
-    object-fit: cover;
-    height: 120px;
-    
-  }
-  .arriere {
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-  }
-  .active {
-    transform: rotateY(180deg)
-  }
 
 
-  css click description/image tournante */
+
+  /*css click description/image tournante */
 
 .descriptionTournante{
    color: snow;
@@ -274,5 +197,5 @@ background-color: #3c254c;
   
   BACKGROUND-COLOR: brown;
 }
-/* articles et produits notice
+/* articles et produits notice*/
 

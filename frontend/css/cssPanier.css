@@ -79,12 +79,12 @@ a {
 
 
   
-  ::before ::after {
+  /* ::before ::after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+  } */
   
   /* FIN NAVBAR*/
   
@@ -113,8 +113,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: 
-    ;
+    
     background: #ffffc7
 }
 .cart-card__recap{
@@ -220,12 +219,12 @@ button {
   color: #ffffc7 ;
   border-radius: 5%;
 }
-button:hover {
+.cart-card__form__button:hover {
   background: #ffa491;
   color: #eeeeee
   ;
 }
-button:active {
+.cart-card__form__button:active {
   background: #aa7788;
   ;
 
@@ -240,142 +239,17 @@ button:active {
   color: #ffffc7;
   margin-top: 1em;
 }
-  /* .cart-card__form {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #352208;
-    height: 100%;
-    background-color: #804fb6;
-  }
-  
-   .cart-card__form .form {
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-  }
-  
-   .cart-card__form .name-and-lastname {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-   .cart-card__form .postal-and-city {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-  
-  .cart-card__form .cart-card__form-line {
-    margin: 5px 0px;
-  }
-  
-   .cart-card__form .cart-card__form-line label {
-    display: none;
-  }
-  
-  .cart-card__form .cart-card__form-line {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-   .cart-card__form #bloc__phone {
-    width: 100%;
-  }
-   .cart-card__form #bloc__mail {
-    width: 100%;
-  }
-  
-   .cart-card__form #bloc__mail input[type="text"] {
-    margin: 10px;
-  }
-  
-   .cart-card__form #bloc__mail #bloc__adress {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-  }
-  
-  .cart-card__form__buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    text-align: center;
-  }
-  
-   .cart-card__form__quantity {
-    margin-bottom: 20px;
-  }
-  
-   .cart-card__form__color {
-    margin-bottom: 40px;
-  }
-  
-  .cart-card__form .cart-card__form__button {
-    padding: 20px;
-    background: #e1bb80;
-    border-radius: 5px;
-    border: solid 1px #352208;
-  }
-   .cart-card__form .erreur {
-    padding: 5px 0;
-    color: red;
-  }
-  
-   .cart-card__form .to-pay {
-    font-family: Josefin Sans;
-    font-size: 18px;
-    margin-bottom: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: center;
-        align-self: center;
-  }
-  
-   .cart-card__form .to-pay:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
-  
-   */
+.cart-card__form__button{
+  display: block;
+  margin: 30px auto;
+  outline: 0;
+  background: #ee5544;
+  width: 90%;
+  border: 0;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffc7 ;
+  border-radius: 5%;
+}

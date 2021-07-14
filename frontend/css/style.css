@@ -88,7 +88,17 @@ a {
 
 ;
 }
+
+/*
+====================================
+fin Navbar
+====================================
+*/
+
+
+/*======================================
 /*-------------------header-------------*/ 
+/*=======================================*/
 .header {
     min-height: calc(100vh - 60px);
     background: url("../../backend/images/teddy_1.jpg") center/cover no-repeat;
@@ -124,7 +134,7 @@ a {
     cursor: pointer;
     /* z-index: 10; */
     position: absolute;
-    left: 40%;
+    left: 27%;
      
   }
 .boutonAchatDeLaBanniere:hover {
@@ -132,6 +142,12 @@ a {
   color: var(--mainGrey);
 }
 /*-----------------fin du header--------------*/
+/*/============================================//*/
+
+
+
+
+
 /* --------------- Produits ---------------- */
 .produitsContainer{
   background-color: #FFA491;
@@ -150,10 +166,6 @@ a {
 
 
 
-  /*************A RANGER DANS CARTE TOURNANTE PLUS BAS*/
-  
-
-  /*************A RANGER DANS CARTE TOURNANTE*/
   .justifyProduits {
     width: 100vw;
     margin: 0 auto;
@@ -280,11 +292,11 @@ a {
   margin: 9px 18px;
   font-size: large;
   /* color: brown; */
-  border: dashed 1px #3C254C
-  ;
+  border: dashed 1px #3C254C;
   padding: 5%;
   DISPLAY: flex;
   MARGIN-RIGHT: 13%;
+  cursor: pointer;
 }
 .product__button__panier:hover {
   background: #FFA491;
@@ -400,34 +412,14 @@ a {
     color: yellow;
 }
 
+/* container produits prix et  nom */
+.product__infos{
+  border: 1px dashed #FFFFC7;
+  background-color: #548687 ;
+  color:#FFFFC7 ;
+}
 
 
-/* .footer-1 a,
-.footer-2 a,
-.footer-3 a {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0 16px 0;
-  text-decoration: none;
-}
-.heberger h4 {
-  margin-right: -19px;
-}
-.assistance {
-  margin-left: 1%;
-}
-.heberger {
-  margin-left: 17%;
-}
-.a-propos {
-  margin: 0px 1px;
-}
-.all-footer {
-  display: flex;
-  justify-content: space-around;
- 
-  background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);
-} */
 
 
 

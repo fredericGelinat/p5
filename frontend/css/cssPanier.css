@@ -296,4 +296,29 @@ input {
       background-color: #ffa491;
   }
     }
+    @media screen and (max-width: 1920px) {
+ 
+      .carte {
+        cursor: pointer;
+        width: 42vw;
+        height: 25vh;
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
   
+    .cart {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .cart-card__form {
+    border: 5px dashed #473335;
+    margin: 5em 0 5em 0;
+    background-color: #ffa491;
+}
+      }

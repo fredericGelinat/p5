@@ -337,3 +337,30 @@ background-color: #3c254c;
     justify-content: center;
 }
     }
+    @media screen and (min-width: 1500px) {
+ 
+      .carte {
+        cursor: pointer;
+        width: 34vw;
+        height: 25vh;
+        position: absolute;
+        top: 73%;
+        left: 53%;
+        transform: translate(-50%,-50%);
+    }
+      }
+    
+    @media screen and (min-width: 1920px) {
+ 
+      .carte {
+        cursor: pointer;
+        width: 29vw;
+        height: 25vh;
+        position: absolute;
+        top: 61%;
+        left: 52%;
+        transform: translate(-50%,-50%);
+    }
+      }
+  
+   

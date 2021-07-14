@@ -33,7 +33,14 @@ a {
     display: flex;
     align-items: center;
     /*background: url("../../backend/images/teddy_2.jpg") center/cover no-repeat;*/
-    background: radial-gradient(circle at center, #c98987 10%, #bc95e7 100%);
+    /* background: radial-gradient(circle at center, #bb7766
+    10%, #aa66bb
+    100%); */
+    
+
+    background: radial-gradient(circle at center,#ffa491 10%, #ffffc7 100%); 
+
+
     z-index: 1;
   }
 .barreDeNavigation img{
@@ -55,18 +62,32 @@ a {
   cursor: pointer;
   TOP: 38%;
   RIGHT: 15%;
+  list-style-type: none;
   
   }
 .panierItems {
   position: absolute;
   top: 39%;
-  right: 13%;
+  right: 11%;
     background: var(--primaryColor);
     padding: 0 5px;
     border-radius: 30%;
     color: var(--mainWhite);
   }
+.itemNav{
+  font-size: xx-large;
+  color: #eeeeee
+  ;
+}
+.fas:hover {
+  color: #ffa491
+  ;
+}
+.fas{
+  color: #ee5544
 
+;
+}
 /*-------------------header-------------*/ 
 .header {
     min-height: calc(100vh - 60px);
@@ -81,7 +102,8 @@ a {
     background: transparent;
     display: inline-block;
     /* padding: 2rem; */
-    color:#dfb3f5
+    color:#3C254C
+
    
   }
 .titreDeLaBanniere {
@@ -111,10 +133,8 @@ a {
 }
 /*-----------------fin du header--------------*/
 /* --------------- Produits ---------------- */
-.bg{
-  background: radial-gradient(circle at center, hsl(269, 41%, 51%) 50%, #c98987 10%);
-  height: 75vh;
-
+.produitsContainer{
+  background-color: #FFA491;
 }
 .produits {
     padding: 4rem 0;
@@ -125,6 +145,7 @@ a {
     margin-bottom: 5rem;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
+    color: #3C254C;
   }
 
 
@@ -236,7 +257,8 @@ a {
     width: 50%;
     min-height: 12rem;
     transition: var(--mainTransition);
-    border: rgb(224, 64, 163) 5px solid;
+    border: #dd99cc
+    5px solid;
     border-radius: 25%;
   }
   .product__img img{
@@ -244,7 +266,7 @@ a {
     width: 94%;
     min-height: 12rem;
     transition: var(--mainTransition);
-    border: rgb(224, 64, 163) 5px solid;
+    border: #3C254C 5px solid;
     border-radius: 25%;
 
 
@@ -254,11 +276,30 @@ a {
 /* bouton details/commander*/
 
 .product__button__panier {
-  background: aliceblue;
-  margin: 5px 55px;
+  background: #3C254C;
+  margin: 9px 18px;
   font-size: large;
   /* color: brown; */
-  border: dashed 1px royalblue;
+  border: dashed 1px #3C254C
+  ;
+  padding: 5%;
+  DISPLAY: flex;
+  MARGIN-RIGHT: 13%;
+}
+.product__button__panier:hover {
+  background: #FFA491;
+
+
+  
+  margin: 9px 18px;
+  font-size:x-large;
+  /* color: brown; */
+  border: dashed 1px #FFA491
+
+  ;
+  padding: 5%;
+  DISPLAY: flex;
+  MARGIN-RIGHT: 13%;
 }
 
 /* .produit button{
@@ -295,7 +336,10 @@ a {
   .produit h4 {
     margin-top: -0.3rem;
     letter-spacing: var(--mainSpacing);
-    color: #d1f40ed9;
+    color: #548687
+
+
+    ;
     /* FONT-SIZE: 1REM; */
     BORDER: 1PX SOLID;
     TEXT-ALIGN: center;
@@ -304,9 +348,29 @@ a {
     align-items: center;
     justify-content: center;
     padding: 2% 3%;
-    BACKGROUND-COLOR: brown;
+    BACKGROUND-COLOR: #FFFFC7;
+    ;
 }
+.produit h4:hover {
+  margin-top: -0.3rem;
+  letter-spacing: var(--mainSpacing);
+  
 
+
+
+  ;
+  /* FONT-SIZE: 1REM; */
+  BORDER: 1PX SOLID;
+  TEXT-ALIGN: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 3%;
+  BACKGROUND-COLOR: #FFFFC7
+
+  ;
+}
   .NomEtPrixCarte{
     display: flex;
     justify-content:space-evenly;

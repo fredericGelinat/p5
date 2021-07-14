@@ -1,7 +1,5 @@
 /* sytles du panier avant confirmation achat*/
- .cart-card__recap{
-    background-color: #804fb6;
-  } 
+ 
 
   @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
@@ -14,10 +12,17 @@
   --mainTransition: all 0.3s linear;
 }
 
-
-a{
-    text-decoration: none;
+body {
+  font-family: "Josefin sans";
+  margin: 0;
+  padding: 0;
 }
+
+a {
+  text-decoration: none;
+  color: #352208;
+}
+
 /* --------------- Navbar ---------------- */
 .barreDeNavigation {
     position: sticky;
@@ -73,7 +78,7 @@ a{
   }
 
 
-  *,
+  
   ::before ::after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -81,52 +86,70 @@ a{
     padding: 0;
   }
   
-  body {
-    font-family: "Josefin sans";
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #352208;
-  }
+  /* FIN NAVBAR*/
   
   h1 {
     font-family: "MV Boli";
   }
   
+/* TITRE PAGE*/
+.cart-card .cart{
+  display: flex;
+  justify-content: center;
+  border: #ffa491
+  5px dashed;
+  background: #3c254c
+  ;
+  color: #ffffc7
 
 
+  ;
+}
+
+/* main*/
+
+main{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: 
+    ;
+    background: #ffffc7
+}
+.cart-card__recap{
+  background-color: #3c254c
+  ;
+} 
 /* recap lignes resumé panier*/
   .cart-card__recap__row{
-      border: 5px solid rgb(212, 113, 113);
+      border: 5px solid #548687;
       display: flex;
       /* justify-content: center; */
   }
 
 .product-row{
-    background-color: #bc95e7;
-     width: 8vw; 
+    background-color: #ffa491;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #473335;
 }
 .product-row .cart-card__recap__title{
     width: 25vh;
-    border: 1px solid rgb(212, 113, 113);
+    border: 1px solid #3c254c;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 
-/* .priceTotal{
-  background-color: turquoise;
-  height: 10vh;
-  display: inline;
-  position: absolute;
-} */
+ .priceTotal{
+  color: #ffffc7;
+ 
+  
+  
+}
 
 
   /* formulaire*/
@@ -187,19 +210,35 @@ button {
   display: block;
   margin: 30px auto;
   outline: 0;
-  background: rgb(250,165,9);
+  background: #ee5544;
   width: 90%;
   border: 0;
   padding: 15px;
   border-radius: 3px;
   font-size: 20px;
   cursor: pointer;
+  color: #ffffc7 ;
+  border-radius: 5%;
 }
 button:hover {
-  background: rgb(252,181,49);
+  background: #ffa491;
+  color: #eeeeee
+  ;
 }
 button:active {
-  background: rgb(250,165,9);
+  background: #aa7788;
+  ;
+
+
+}
+.cart-card__form{
+  border: 5px dashed #473335;
+  margin: 5em 0 5em 0;
+  background-color: #ffa491;
+}
+.cart-card__form h2{
+  color: #ffffc7;
+  margin-top: 1em;
 }
   /* .cart-card__form {
     width: 100%;

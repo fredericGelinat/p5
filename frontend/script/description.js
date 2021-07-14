@@ -99,8 +99,9 @@ function addToCart() {
 
       // Effets visuels lors d'un ajout au panier
       confirmation.style.visibility = "visible";
-      textConfirmation.innerHTML = `Vous avez ajouté ${bearNumber.value} nounours à votre panier !`;
+      textConfirmation.innerHTML = `Vous avez ajouté ${bearNumber.value} ours 🐻 à votre panier !`;
       setTimeout("location.reload(true);", 4000);
+      textConfirmation.style.color="white";
     } else {
       confirmation.style.visibility = "visible";
       textConfirmation.style.background = "red";

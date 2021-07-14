@@ -120,11 +120,11 @@ function checkFormAndPostRequest() {
       !inputMail.value ||
       !inputPhone.value
     ) {
-      erreur.innerHTML = "Vous devez renseigner tous les champs !";
+      erreur.innerHTML = "Vous devez renseigner tous les champs ! ✒️✒️✒️";
       e.preventDefault();
     } else if (isNaN(inputPhone.value)) {
       e.preventDefault();
-      erreur.innerText = "Votre numéro de téléphone n'est pas valide";
+      erreur.innerText = "Votre numéro de téléphone n'est pas valide 📵📵📵";
     } else {
 
       // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
@@ -174,7 +174,7 @@ function checkFormAndPostRequest() {
 }
 
 
-
+ const orderId = new Date().getTime.toString();
 
 
 

@@ -20,13 +20,13 @@ function afficherProduit() {
     .then(function (res) {
       return res.json();
     })
-    /*.catch((error) => {
+    .catch((error) => {
       let produitsContainer = document.querySelector(".produitsContainer");
       produitsContainer.innerHTML =
-        "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+        " Avez vous bien lancé le serveur local (Port 3000) ?";
         produitsContainer.style.textAlign = "center";
         produitsContainer.style.padding = "30vh 0";
-    })*/
+    })
 
     // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
     .then(function (resultatAPI) {
@@ -94,19 +94,19 @@ function afficherProduit() {
 
 
 
-        let produitPanierButtonDiv = document.createElement("div");
-        document.querySelector(".justifyProduits").appendChild(produitPanierButtonDiv);
-        produitPanierButtonDiv.classList.add("buttonAjouterPanier");
+        // let produitPanierButtonDiv = document.createElement("div");
+        // document.querySelector(".justifyProduits").appendChild(produitPanierButtonDiv);
+        // produitPanierButtonDiv.classList.add("buttonAjouterPanier");
         
 
-        let panierBtnAccueilLink = document.createElement("a");
-        produitPanierButtonDiv.appendChild(panierBtnAccueilLink)
-        panierBtnAccueilLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
-        panierBtnAccueilLink.classList.add("lienVersPanier")
+        // let panierBtnAccueilLink = document.createElement("a");
+        // produitPanierButtonDiv.appendChild(panierBtnAccueilLink)
+        // panierBtnAccueilLink.href = `panier.html?id=${resultatAPI[teddies]._id}`;
+        // panierBtnAccueilLink.classList.add("lienVersPanier")
 
-        let ajoutPanierButton = document.createElement("div");
-        produitLink.appendChild(ajoutPanierButton);
-        ajoutPanierButton.innerHTML = `<i class="fas fa-info-circle"></i> `
+        // let ajoutPanierButton = document.createElement("div");
+        // panierBtnAccueilLink.appendChild(ajoutPanierButton);
+        // ajoutPanierButton.innerHTML = `<i class="fas fa-info-circle"></i> `
 
         
       };
@@ -114,25 +114,33 @@ function afficherProduit() {
 };
 
 //   function ajoutPanierAccueil() {
-    
-// const boutonAjoutPanierAccueil = document.querySelector("a");
+//     let params = new URL(document.location).searchParams;
+//     let id = params.get("id"); 
+// const boutonAjoutPanierAccueil = document.querySelector(".justifyProduits");
 // // const confirmation = document.querySelector(".added-to-cart-confirmation");
 // // const textConfirmation = document.querySelector(".confirmation-text");
     
-
+// const productCardImg = document.querySelector(".imgUrl");
+// const productCardName = document.querySelector(".product__infos__title");
+// const productCardDescription = document.querySelector(
+//   ".detailsProduit"
+// );
+// const productCardPrice = document.querySelector(".product__infos__price");
+// const bearNumber = document.querySelector("#nombreDOurson");
+// const colorSelect = document.querySelector(".couleurProduit");
 
 
 // boutonAjoutPanierAccueil.addEventListener("click",  () => {
-//     if (ajoutPanierButton > 1){
-//       // ------ Création du produit qui sera ajouté au panier
+//     if (boutonAjoutPanierAccueil > 1){
+//      // ------ Création du produit qui sera ajouté au panier
 //       let produitAdded = {
-//         name: produitInfoTitle.innerHTML,
-//         price: parseFloat(produitInfoPrice.innerHTML),
+//         name: productCardName.innerHTML,
+//         price: parseFloat(productCardPrice.innerHTML),
 //         // quantity: parseFloat(document.querySelector("#nombreDOurson").value),
 //         _id: id,
        
 //       };
-
+      
 //       // ----------------- Gestion du localStorage
      
 //     // ----------------- Gestion du localStorage

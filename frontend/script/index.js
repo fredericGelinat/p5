@@ -3,12 +3,13 @@ affichageDescription ();
 function affichageDescription(){
     //erreur404();
     afficherProduit();
-    ajoutPanierAccueil();
+    //ajoutPanierAccueil();
 }
 
 
 
-
+// let params = (new URL(document.location)).searchParams;
+// var _id = params.get('id'); // searchParamas = va chercher cet id specifique dans l'api et pas un autre.
 
 
 
@@ -52,23 +53,17 @@ function afficherProduit() {
         produitImg.src = resultatAPI[teddies].imageUrl;
 
 
-        let produitPanierButton = document.createElement("button");
-        produitLink.appendChild(produitPanierButton);
-        produitPanierButton.classList.add("product__button__panier");
-        
-        let produitPanier = document.createElement([type = "submit"]);
-        produitPanierButton.appendChild(produitPanier);
-        produitPanier.innerHTML = `<h4 class="AjouterAuPanierAccueil"> Détails / Commander</h4> `
 
-        let produitLinkAjoutPanier = document.createElement("a");
-        produitPanier.appendChild(produitLinkAjoutPanier);
-        produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
-        // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
+       
+
+        // let produitLinkAjoutPanier = document.createElement("a");
+        // produitPanier.appendChild(produitLinkAjoutPanier);
+        // produitLinkAjoutPanier.href = `description.html?id=${resultatAPI[teddies]._id}`;// trouver un objet qui reprend les caracteristiques
+        // // produitLinkAjoutPanier.href = ` panier.html?image=${resultatAPI[teddies].imageUrl}`;
         
-        produitLinkAjoutPanier.classList.add("stretched-link");
+        // produitLinkAjoutPanier.classList.add("stretched-link");
       
         
-
 
 
         let produitInfosDiv = document.createElement("div");
@@ -97,127 +92,147 @@ function afficherProduit() {
 
 
 
+
+
+        let produitPanierButtonDiv = document.createElement("div");
+        document.querySelector(".justifyProduits").appendChild(produitPanierButtonDiv);
+        produitPanierButtonDiv.classList.add("buttonAjouterPanier");
+        
+
+        let panierBtnAccueilLink = document.createElement("a");
+        produitPanierButtonDiv.appendChild(panierBtnAccueilLink)
+        panierBtnAccueilLink.href = `description.html?id=${resultatAPI[teddies]._id}`;
+        panierBtnAccueilLink.classList.add("lienVersPanier")
+
+        let ajoutPanierButton = document.createElement("div");
+        produitLink.appendChild(ajoutPanierButton);
+        ajoutPanierButton.innerHTML = `<i class="fas fa-info-circle"></i> `
+
         
       };
     })
 };
-  function ajoutPanierAccueil() {
-    const boutonAjoutPanierAccueil = document.querySelector("button");
-    // const confirmation = document.querySelector(".added-to-cart-confirmation");
-    // const textConfirmation = document.querySelector(".confirmation-text");
+
+//   function ajoutPanierAccueil() {
     
-    boutonAjoutPanierAccueil.addEventListener("click", () => {
-      
-        // ------ Création du produit qui sera ajouté au panier
-        let produitAdded = {
-          name: nomCartDescription.innerHTML,
-          price: parseFloat(prixCartDescription.innerHTML),
-           quantity: parseFloat(document.querySelector("#nombreDOurson").value),
-          _id: id,
-         
-        };
-  
-        // ----------------- Gestion du localStorage
+// const boutonAjoutPanierAccueil = document.querySelector("a");
+// // const confirmation = document.querySelector(".added-to-cart-confirmation");
+// // const textConfirmation = document.querySelector(".confirmation-text");
+    
+
+
+
+// boutonAjoutPanierAccueil.addEventListener("click",  () => {
+//     if (ajoutPanierButton > 1){
+//       // ------ Création du produit qui sera ajouté au panier
+//       let produitAdded = {
+//         name: produitInfoTitle.innerHTML,
+//         price: parseFloat(produitInfoPrice.innerHTML),
+//         // quantity: parseFloat(document.querySelector("#nombreDOurson").value),
+//         _id: id,
        
-      // ----------------- Gestion du localStorage
-      let arrayProductsInCart = [];
-        
-        // Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
-        if (localStorage.getItem("products") !== null) {
-          arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
-          
-          
-          // Si le LS est vide, on le crée avec le produit ajouté
-        } 
-          arrayProductsInCart.push(produitAdded);
-          localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
-        
-  
-        // Effets visuels lors d'un ajout au panier
-        confirmation.style.visibility = "visible";
-        textConfirmation.innerHTML = `Vous avez ajouté ${nombreDOurson.value} nounours à votre panier !`;
-        setTimeout("location.reload(true);", 4000);
-      
-    });
+//       };
 
-
-
-
-
-
-
-
-
-  }
-
-
-let params = (new URL(document.location)).searchParams;
-var _id = params.get('id'); // searchParamas = va chercher cet id specifique dans l'api et pas un autre.
-
-
-
-function ajoutPanier() {
-   const boutonAjoutPanier = document.getElementsByClassName("button");
-  // const confirmation = document.querySelector(".added-to-cart-confirmation");
-  // const textConfirmation = document.querySelector(".confirmation-text");
-  const nombreDOursonCartDesription = document.querySelector("button");
-const nomCartDescription = document.querySelector(".nameProduit");
-const prixCartDescription = document.querySelector(".prixProduit");
-  const produitAdded = {
-    name: nomCartDescription.innerHTML,
-    price: parseFloat(prixCartDescription.innerHTML),
-    quantity: parseFloat(document.querySelector("#nombreDOurson")),
-    _id: _id,}
-  // let li = document.getElementsByTagName("li");
-  // let buttons = document.getElementsByTagName("span");
-  
-  Array.from(nombreDOursonCartDesription).forEach(b => {
-    b.addEventListener("click", function() {
-      console.log(produitAdded);
-    });
-  });
-
-
-
-
-
-
-  boutonAjoutPanier.addEventListener("click", () => {
-    if (nombreOursonLabel.value > 0 && nombreOursonLabel.value < 100) {
-      // ------ Création du produit qui sera ajouté au panier
-      
-       
-      };
-
-       //----------------- Gestion du localStorage
+//       // ----------------- Gestion du localStorage
      
-     //----------------- Gestion du localStorage
-    let arrayProductsInCart = [];
+//     // ----------------- Gestion du localStorage
+//     let arrayProductsInCart = [];
       
-       //Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
-      if (localStorage.getItem("products") !== null) {
-        arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
+//       // Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
+//       if (localStorage.getItem("products") !== null) {
+//         arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
         
         
-        // Si le LS est vide, on le crée avec le produit ajouté
-       
-        arrayProductsInCart.push(produitAdded);
-        localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
+//         // Si le LS est vide, on le crée avec le produit ajouté
+//       } 
+//         arrayProductsInCart.push(produitAdded);
+//         localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
       
 
-      // Effets visuels lors d'un ajout au panier
-      confirmation.style.visibility = "visible";
-      textConfirmation.innerHTML = `Vous avez ajouté ${nombreDOurson.value} nounours à votre panier !`;
-      setTimeout("location.reload(true);", 4000);
-  } 
-    else {
-      confirmation.style.visibility = "visible";
-      textConfirmation.style.background = "red";
-      textConfirmation.style.border = "red";
-      textConfirmation.style.color = "white";
-      textConfirmation.style.whiteSpace = "normal";
-      textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
-    }
+//       // Effets visuels lors d'un ajout au panier
+//       confirmation.style.visibility = "visible";
+//       textConfirmation.innerHTML = `Vous avez ajouté ${nombreDOurson.value} nounours à votre panier !`;
+//       setTimeout("location.reload(true);", 4000);
+//     }
+//     else {
+//       confirmation.style.visibility = "visible";
+//       textConfirmation.style.background = "red";
+//       textConfirmation.style.border = "red";
+//       textConfirmation.style.color = "white";
+//       textConfirmation.style.whiteSpace = "normal";
+//       textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99 unité`;
+//     }
+//   });
+// }
+  
+
+
+
+
+
+
+// function ajoutPanier() {
+//    const boutonAjoutPanier = document.getElementsByClassName("button");
+//   // const confirmation = document.querySelector(".added-to-cart-confirmation");
+//   // const textConfirmation = document.querySelector(".confirmation-text");
+//   const nombreDOursonCartDesription = document.querySelector("button");
+// const nomCartDescription = document.querySelector(".nameProduit");
+// const prixCartDescription = document.querySelector(".prixProduit");
+//   const produitAdded = {
+//     name: nomCartDescription.innerHTML,
+//     price: parseFloat(prixCartDescription.innerHTML),
+//     quantity: parseFloat(document.querySelector("#nombreDOurson")),
+//     _id: _id,}
+//   // let li = document.getElementsByTagName("li");
+//   // let buttons = document.getElementsByTagName("span");
+  
+//   Array.from(nombreDOursonCartDesription).forEach(b => {
+//     b.addEventListener("click", function() {
+//       console.log(produitAdded);
+//     });
+//   });
+
+
+
+
+
+
+//   boutonAjoutPanier.addEventListener("click", () => {
+//     if (nombreOursonLabel.value > 0 && nombreOursonLabel.value < 100) {
+//       // ------ Création du produit qui sera ajouté au panier
+      
+       
+//       };
+
+//        //----------------- Gestion du localStorage
+     
+//      //----------------- Gestion du localStorage
+//     let arrayProductsInCart = [];
+      
+//        //Si le localStorage existe, on récupère son contenu, on l'insère dans le tableau arrayProductsInCart, puis on le renvoit vers le localStorage avec le nouveau produit ajouté.
+//       if (localStorage.getItem("products") !== null) {
+//         arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
+        
+        
+//         // Si le LS est vide, on le crée avec le produit ajouté
+       
+//         arrayProductsInCart.push(produitAdded);
+//         localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
+      
+
+//       // Effets visuels lors d'un ajout au panier
+//       confirmation.style.visibility = "visible";
+//       textConfirmation.innerHTML = `Vous avez ajouté ${nombreDOurson.value} nounours à votre panier !`;
+//       setTimeout("location.reload(true);", 4000);
+//   } 
+//     else {
+//       confirmation.style.visibility = "visible";
+//       textConfirmation.style.background = "red";
+//       textConfirmation.style.border = "red";
+//       textConfirmation.style.color = "white";
+//       textConfirmation.style.whiteSpace = "normal";
+//       textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
+//     }
   
   
 
@@ -278,5 +293,4 @@ const prixCartDescription = document.querySelector(".prixProduit");
 
 
   
-}
-  )}   
+// 
